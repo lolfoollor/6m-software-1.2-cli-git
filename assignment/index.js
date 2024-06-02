@@ -6,5 +6,3 @@ scrollToTopButton.addEventListener('click', function() {
         behavior: 'smooth' 
     });
 });
-
-
