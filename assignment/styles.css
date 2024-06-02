@@ -1,0 +1,107 @@
+img {
+    width: 200px;
+}
+
+.bg {
+    position: fixed;
+    background-image: url(../assets/background-img.jpeg);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.picture-in-txt {
+    height: 24px;
+    width: auto;
+    object-fit: cover;
+}
+
+.avatar {
+    opacity: 0.8;
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile {
+    max-width: 600px;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.avatar-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+#header {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 40px;
+}
+
+.info label {
+    font-weight: bold;
+}
+
+.info {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.introduction {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.icons {
+    height: 1em;
+    width: auto;
+    object-fit: cover;
+}
+
+/*Colors for text*/
+
+#python-blue {
+    color: #407EAF;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: black;
+}
+
+#python-yellow {
+    color: #FFE771;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: black;
+}
+
+#java-color {
+    color: #E68821;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: black;
+}
+
+#react-color {
+    color: #00CCFF;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: black;
+}
+
+#spring-boot-color {
+    color:#6DB33F;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: black;
+}
