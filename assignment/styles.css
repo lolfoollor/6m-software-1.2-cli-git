@@ -1,139 +1,214 @@
-img {
-    width: 200px;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bg {
-    position: fixed;
-    background-image: url(../assets/background-img.jpeg);
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background-position: center center;
-    background-size: cover;
-    z-index: -1;
+  position: fixed;
+  background-image: url(../assets/background-img.jpeg);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.sliding-window {
+  width: 800px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.content-container {
+  width: 20%;
+  transition: 2s;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 40px;
 }
 
 .picture-in-txt {
-    height: 24px;
-    width: auto;
-    object-fit: cover;
-}
-
-.avatar {
-    opacity: 0.8;
-    display: block;
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    object-fit: cover;
-    border-radius: 50%;
+  height: 24px;
+  width: auto;
+  object-fit: cover;
 }
 
 .profile {
-    position: relative;
-    max-width: 600px;
-    min-width: 200px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  min-height: 100px;
+  max-width: 600px;
+  min-width: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .avatar-container {
-    position: relative;
-    width: auto;
-    height: auto;
-    margin: auto;
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: auto;
 }
 
-#header-profile {
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    font-size: 40px;
-}
-
-.info label {
-    font-weight: bold;
+.avatar-image {
+  opacity: 0.8;
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .info {
-    margin-top: 20px;
-    font-size: 24px;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.info label {
+  font-weight: bold;
 }
 
 .introduction {
-    margin-top: 20px;
-    font-size: 24px;
+  margin-top: 20px;
+  font-size: 24px;
 }
 
 .icons {
-    height: 1em;
-    width: auto;
-    object-fit: cover;
+  height: 1em;
+  width: auto;
+  object-fit: cover;
+}
+
+.navigation {
+  position: absolute;
+  width: calc(100% - 40px);
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  border: 2px solid #000000;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.button:not(:last-child) {
+  margin-right: 40px;
+}
+
+.button:hover {
+  background: #40d3dc;
+}
+
+.outline {
+  -webkit-box-shadow: inset 0 0 30px rgba(56, 220, 223, 1);
+  -moz-box-shadow: inset 0 0 30px rgba(56, 220, 223, 1);
+  box-shadow: inset 0 0 30px rgba(56, 220, 223, 1);
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -80%;
+}
+
+#return-to-top-icon {
+  height: 80px;
+  width: auto;
+  object-fit: cover;
+}
+
+#return-to-top:hover {
+  height: 80px;
+  width: auto;
+  object-fit: cover;
+  content: url("../assets/pusheen-on-hover.png");
 }
 
 /*Colors for text*/
 
 #python-blue {
-    color: #407EAF;
-    -webkit-text-stroke-width: 0.3px;
-    -webkit-text-stroke-color: black;
+  color: #407eaf;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: black;
 }
 
 #python-yellow {
-    color: #FFE771;
-    -webkit-text-stroke-width: 0.3px;
-    -webkit-text-stroke-color: black;
+  color: #ffe771;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: black;
 }
 
 #java-color {
-    color: #E68821;
-    -webkit-text-stroke-width: 0.3px;
-    -webkit-text-stroke-color: black;
+  color: #e68821;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: black;
 }
 
 #react-color {
-    color: #00CCFF;
-    -webkit-text-stroke-width: 0.3px;
-    -webkit-text-stroke-color: black;
+  color: #00ccff;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: black;
 }
 
 #spring-boot-color {
-    color:#6DB33F;
-    -webkit-text-stroke-width: 0.3px;
-    -webkit-text-stroke-color: black;
-}
-
-#return-to-top-icon {
-    height: 80px;
-    width: auto;
-    object-fit: cover;
-}
-
-#return-to-top:hover {
-    height: 80px;
-    width: auto;
-    object-fit: cover;
-    content: url('../assets/pusheen-on-hover.png');
+  color: #6db33f;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: black;
 }
 
 /*Floating icons*/
 @keyframes floating {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(-20px); 
-    }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
 }
 
 .floating-icons {
-    position: absolute;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    animation: floating 2s ease infinite alternate; /* Animation */
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  animation: floating 2s ease infinite alternate; /* Animation */
 }
